@@ -19,3 +19,9 @@ O projeto deverá ser implementado utilizando as seguintes tecnologias abordadas
 - Spring Data JPA
 - PostgreSQL
 
+Na aplicação cliente sera as seguintes funcionalidades utilizando reactJS:
+
+- Cadastrar filmes
+- Avaliar um filme
+- Listar filmes com a média de avaliações
+
