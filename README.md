@@ -25,3 +25,5 @@ Na aplicação cliente sera as seguintes funcionalidades utilizando reactJS:
 - Avaliar um filme
 - Listar filmes com a média de avaliações
 
+
+[Link do repositorio do front](https://github.com/igorlucas/notafilmes-ui)
