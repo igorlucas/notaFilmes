@@ -34,9 +34,6 @@ public class Pessoa {
 	@JsonIgnore
 	@NotNull
 	private String senha;
-	
-	private String fotoPerfil;
-
 
 	@ElementCollection(fetch=FetchType.EAGER)
 	@CollectionTable(name="PERFIS")
@@ -48,13 +45,12 @@ public class Pessoa {
 	}
 
 
-	public Pessoa(Integer id, String nome, String email, String senha,String fotoPerfil) {
+	public Pessoa(Integer id, String nome, String email, String senha) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
-		this.fotoPerfil = fotoPerfil;
 		addPerfil(Perfil.PADRAO);
 	}
 
@@ -88,15 +84,6 @@ public class Pessoa {
 		this.email = email;
 	}
 
-
-	public String getFotoPerfil() {
-		return fotoPerfil;
-	}
-
-
-	public void setFotoPerfil(String fotoPerfil) {
-		this.fotoPerfil = fotoPerfil;
-	}
 	
 	public String getSenha() {
 		return senha;

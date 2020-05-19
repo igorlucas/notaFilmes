@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 public class NovaAvaliacaoDTO {
 	
 	@NotNull
-	private Integer pessoa_id;
+	private String ip;
 
 	@NotNull
 	private Integer filme_id;
@@ -21,14 +21,17 @@ public class NovaAvaliacaoDTO {
 	private int nota;
 	
 	NovaAvaliacaoDTO(){}
+	
 
-	public Integer getPessoa_id() {
-		return pessoa_id;
+	public String getIp() {
+		return ip;
 	}
 
-	public void setPessoa_id(Integer pessoa_id) {
-		this.pessoa_id = pessoa_id;
+
+	public void setIp(String ip) {
+		this.ip = ip;
 	}
+
 
 	public Integer getFilme_id() {
 		return filme_id;

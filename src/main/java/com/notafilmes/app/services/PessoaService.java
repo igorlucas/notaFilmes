@@ -36,7 +36,6 @@ public class PessoaService {
 				null, 
 				novaPessoaDto.getNome(), 
 				novaPessoaDto.getEmail(), 
-				_pe.encode(novaPessoaDto.getSenha()), 
-				novaPessoaDto.getFotoPerfil());	
+				_pe.encode(novaPessoaDto.getSenha()));	
 	}
 }

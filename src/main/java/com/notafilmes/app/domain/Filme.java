@@ -22,7 +22,7 @@ public class Filme {
 	private Integer id;
 	
 	@NotNull
-	@Size(max = 20)
+	@Size(max = 50)
 	private String titulo;
 	
 	@Size(min = 50, max = 1000)
@@ -31,7 +31,7 @@ public class Filme {
 	
 	@JsonFormat(pattern="dd/MM/yyyy")
 	@NotNull
-	private Date anoLancamento;
+	private Date dataLancamento;
 	
 	@NotNull
 	private String nomesProdutores;
@@ -46,13 +46,13 @@ public class Filme {
 		this.avaliacoes = new ArrayList<Avaliacao>();
 	}
 	
-	public Filme(Integer id, String titulo, String sinopse, Date anoLancamento, String nomesProdutores,
+	public Filme(Integer id, String titulo, String sinopse, Date dataLancamento, String nomesProdutores,
 			String nomesProtagonistas) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.sinopse = sinopse;
-		this.anoLancamento = anoLancamento;
+		this.dataLancamento = dataLancamento;
 		this.nomesProdutores = nomesProdutores;
 		this.nomesProtagonistas = nomesProtagonistas;
 		this.avaliacoes = new ArrayList<Avaliacao>();
@@ -82,12 +82,12 @@ public class Filme {
 		this.sinopse = sinopse;
 	}
 
-	public Date getAnoLancamento() {
-		return anoLancamento;
+	public Date getDataLancamento() {
+		return dataLancamento;
 	}
 
-	public void setAnoLancamento(Date anoLancamento) {
-		this.anoLancamento = anoLancamento;
+	public void setDataLancamento(Date dataLancamento) {
+		this.dataLancamento = dataLancamento;
 	}
 
 	public String getNomesProdutores() {
@@ -113,7 +113,5 @@ public class Filme {
 	public void setAvaliacoes(List<Avaliacao> avaliacoes) {
 		this.avaliacoes = avaliacoes;
 	}
-	
-	
 	
 }

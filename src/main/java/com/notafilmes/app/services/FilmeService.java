@@ -44,7 +44,7 @@ public class FilmeService {
 				null,
 				novoFilmeDto.getTitulo(), 
 				novoFilmeDto.getSinopse(), 
-				novoFilmeDto.getAnoLancamento(), 
+				novoFilmeDto.getDataLancamento(), 
 				nomesProdutores, 
 				nomesProtagonistas);
 	}

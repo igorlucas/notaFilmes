@@ -17,7 +17,7 @@ public class NovoFilmeDTO  {
 	private String sinopse;
 	
 	@NotNull
-	private Date anoLancamento;
+	private Date dataLancamento;
 	
 	private List<String> nomesProdutores;
 		
@@ -40,12 +40,12 @@ public class NovoFilmeDTO  {
 		this.sinopse = sinopse;
 	}
 
-	public Date getAnoLancamento() {
-		return anoLancamento;
+	public Date getDataLancamento() {
+		return dataLancamento;
 	}
 
-	public void setAnoLancamento(Date anoLancamento) {
-		this.anoLancamento = anoLancamento;
+	public void setDataLancamento(Date dataLancamento) {
+		this.dataLancamento = dataLancamento;
 	}
 
 	public List<String> getNomesProdutores() {
@@ -59,9 +59,9 @@ public class NovoFilmeDTO  {
 	public List<String> getNomesProtagonistas() {
 		return nomesProtagonistas;
 	}
-
-	public void setNomeProtagonistas(List<String> nomesProtagonistas) {
+	
+	public void setNomesProtagonistas(List<String> nomesProtagonistas) {
 		this.nomesProtagonistas = nomesProtagonistas;
-	}
+	}	
 	
 }

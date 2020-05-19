@@ -13,8 +13,6 @@ public class NovaPessoaDTO {
 	@NotNull
 	private String senha;
 	
-	private String fotoPerfil;
-	
 	public String getNome() {
 		return nome;
 	}
@@ -37,14 +35,6 @@ public class NovaPessoaDTO {
 	
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	
-	public String getFotoPerfil() {
-		return fotoPerfil;
-	}
-	
-	public void setFotoPerfil(String fotoPerfil) {
-		this.fotoPerfil = fotoPerfil;
 	}
 	
 }

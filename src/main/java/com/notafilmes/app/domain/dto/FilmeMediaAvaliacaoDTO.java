@@ -17,7 +17,7 @@ public class FilmeMediaAvaliacaoDTO {
 	private String sinopse;
 	
 	@JsonFormat(pattern="dd/MM/yyyy")
-	private Date anoLancamento;
+	private Date dataLancamento;
 	
 	private List<String> nomesProdutores;
 		
@@ -31,7 +31,7 @@ public class FilmeMediaAvaliacaoDTO {
 		this.id = filme.getId();
 		this.titulo = filme.getTitulo();
 		this.sinopse = filme.getSinopse();
-		this.anoLancamento = filme.getAnoLancamento();
+		this.dataLancamento = filme.getDataLancamento();
 		this.nomesProdutores = Arrays.asList(filme.getNomesProdutores().split(";"));;
 		this.nomesProtagonistas = Arrays.asList(filme.getNomesProtagonistas().split(";"));
 		this.avaliacoes = filme.getAvaliacoes();
@@ -63,12 +63,12 @@ public class FilmeMediaAvaliacaoDTO {
 		this.sinopse = sinopse;
 	}
 
-	public Date getAnoLancamento() {
-		return anoLancamento;
+	public Date getDataLancamento() {
+		return dataLancamento;
 	}
 
-	public void setAnoLancamento(Date anoLancamento) {
-		this.anoLancamento = anoLancamento;
+	public void setDataLancamento(Date dataLancamento) {
+		this.dataLancamento = dataLancamento;
 	}
 
 	public List<String> getNomesProdutores() {
@@ -107,5 +107,6 @@ public class FilmeMediaAvaliacaoDTO {
 		return avaliacoes.stream()
 				.map(Avaliacao::getNota)
 				.mapToDouble(Integer::doubleValue).average().orElse(0.0);
-	};
+	}
+	
 }

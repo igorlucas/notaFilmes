@@ -20,10 +20,8 @@ public class Avaliacao {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@ManyToOne
-	@JsonIgnore
-	@JoinColumn(name = "pessoa_id")
-	private Pessoa pessoa;
+	@NotNull
+	private String ip;
 
 	private String comentario;
 
@@ -41,19 +39,28 @@ public class Avaliacao {
 	}
 
 	public Avaliacao(NovaAvaliacaoDTO novaAvaliacaoDto) {
-		this.pessoa.setId(novaAvaliacaoDto.getPessoa_id());
+		this.ip = novaAvaliacaoDto.getIp();
 		this.filme.setId(novaAvaliacaoDto.getFilme_id());
 		this.comentario = novaAvaliacaoDto.getComentario();
 		this.nota = novaAvaliacaoDto.getNota();
 	}
 
-	public Avaliacao(int id, Pessoa pessoa, String comentario, Filme filme, int nota) {
+	public Avaliacao(int id, String ip, String comentario, Filme filme, int nota) {
 		super();
 		this.id = id;
-		this.pessoa = pessoa;
+		this.ip = ip;
 		this.comentario = comentario;
 		this.filme = filme;
 		this.nota = nota;
+	}
+
+	
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
 	}
 
 	public int getId() {
@@ -64,13 +71,6 @@ public class Avaliacao {
 		this.id = id;
 	}
 
-	public Pessoa getPessoa() {
-		return pessoa;
-	}
-
-	public void setPessoa(Pessoa pessoa) {
-		this.pessoa = pessoa;
-	}
 
 	public String getComentario() {
 		return comentario;
